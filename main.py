@@ -1,26 +1,9 @@
-classes = [
-        "Yoga 1", "Yoga 2", "Children's Yoga", "Prenatal Yoga", "Senior Yoga"
-    ]
-classcnt = [0, 0, 0, 0, 0]
+'''10 Executive Training School offers typing classes. Each final exam evaluates a
+student’s typing speed and the number of typing errors made. Develop the logic
+for a program that produces a summary table of each examination’s results.
+Each row represents the number of students whose typing speed falls within
+the following ranges of words per minute: 0–19, 20–39, 40–69, and 70 or more.
+Each column represents the number of students who made different numbers of
+typing errors—0 through 6 or more.'''
 
-def printClasses():
-    print("\nEnter -1 to finish.")
-    for i in range(len(classes)):
-        print(str(i + 1) + ". " + classes[i])
 
-def main():
-    printClasses()
-    inputVal = int(input("Select a class:"))
-    if inputVal == -1:
-        finished()
-    elif inputVal == 0 or inputVal <= -2 or inputVal > 5:
-        print("Input a valid number.")
-        main()
-    else:
-        classcnt[inputVal-1] = classcnt[inputVal-1] + 1
-        main()
-def finished():
-    for i in range(len(classes)):
-        print("\n" + str(i + 1) + ". " + classes[i] + ": " + str(classcnt[i]))
-
-main()
